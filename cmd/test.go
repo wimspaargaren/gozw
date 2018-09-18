@@ -7,10 +7,10 @@ import (
 
 	"github.com/comail/colog"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/gozwave/gozw/application"
-	"github.com/gozwave/gozw/frame"
-	"github.com/gozwave/gozw/session"
-	"github.com/gozwave/gozw/transport"
+	"github.com/wimspaargaren/gozw/application"
+	"github.com/wimspaargaren/gozw/frame"
+	"github.com/wimspaargaren/gozw/session"
+	"github.com/wimspaargaren/gozw/transport"
 	"github.com/peterh/liner"
 )
 

@@ -7,7 +7,7 @@ import (
 	"encoding/gob"
 	"errors"
 
-	"github.com/gozwave/gozw/cc"
+	"github.com/wimspaargaren/gozw/cc"
 )
 
 const CommandEventSupportedGet cc.CommandID = 0x01

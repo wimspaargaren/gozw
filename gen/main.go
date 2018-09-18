@@ -8,7 +8,7 @@ import (
 	"os"
 
 	"github.com/codegangsta/cli"
-	"github.com/gozwave/gozw/gen"
+	"github.com/wimspaargaren/gozw/gen"
 )
 
 func main() {

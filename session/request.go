@@ -3,7 +3,7 @@ package session
 import (
 	"time"
 
-	"github.com/gozwave/gozw/frame"
+	"github.com/wimspaargaren/gozw/frame"
 )
 
 // type CallbackType int

@@ -3,9 +3,9 @@ package serialapi
 import (
 	"errors"
 
-	"github.com/gozwave/gozw/frame"
-	"github.com/gozwave/gozw/protocol"
-	"github.com/gozwave/gozw/session"
+	"github.com/wimspaargaren/gozw/frame"
+	"github.com/wimspaargaren/gozw/protocol"
+	"github.com/wimspaargaren/gozw/session"
 )
 
 type InitAppData struct {

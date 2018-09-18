@@ -6,7 +6,7 @@ package clock
 import (
 	"encoding/gob"
 
-	"github.com/gozwave/gozw/cc"
+	"github.com/wimspaargaren/gozw/cc"
 )
 
 const CommandGet cc.CommandID = 0x05

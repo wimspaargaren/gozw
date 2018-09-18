@@ -9,17 +9,17 @@ import (
 
 	"github.com/boltdb/bolt"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/gozwave/gozw/cc"
-	"github.com/gozwave/gozw/cc/association"
-	"github.com/gozwave/gozw/cc/battery"
-	"github.com/gozwave/gozw/cc/manufacturer-specific"
-	"github.com/gozwave/gozw/cc/manufacturer-specific-v2"
-	"github.com/gozwave/gozw/cc/security"
-	"github.com/gozwave/gozw/cc/version"
-	"github.com/gozwave/gozw/cc/version-v2"
-	"github.com/gozwave/gozw/protocol"
-	"github.com/gozwave/gozw/serial-api"
-	"github.com/gozwave/gozw/util"
+	"github.com/wimspaargaren/gozw/cc"
+	"github.com/wimspaargaren/gozw/cc/association"
+	"github.com/wimspaargaren/gozw/cc/battery"
+	"github.com/wimspaargaren/gozw/cc/manufacturer-specific"
+	"github.com/wimspaargaren/gozw/cc/manufacturer-specific-v2"
+	"github.com/wimspaargaren/gozw/cc/security"
+	"github.com/wimspaargaren/gozw/cc/version"
+	"github.com/wimspaargaren/gozw/cc/version-v2"
+	"github.com/wimspaargaren/gozw/protocol"
+	"github.com/wimspaargaren/gozw/serial-api"
+	"github.com/wimspaargaren/gozw/util"
 )
 
 // Node is an in-memory representation of a Z-Wave node

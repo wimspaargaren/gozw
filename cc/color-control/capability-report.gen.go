@@ -8,7 +8,7 @@ import (
 	"encoding/gob"
 	"errors"
 
-	"github.com/gozwave/gozw/cc"
+	"github.com/wimspaargaren/gozw/cc"
 )
 
 const CommandCapabilityReport cc.CommandID = 0x02

@@ -2,96 +2,156 @@
 
 
 [[projects]]
+  digest = "1:24cb1ed1692e5b5b01cb1c2b7cd38bd29ea8b4c9ec854f1325418cfb4c3ab878"
   name = "github.com/asaskevich/EventBus"
   packages = ["."]
+  pruneopts = "UT"
   revision = "9223ecd796146991d8ffc3b822d5aa02f15aee97"
 
 [[projects]]
+  digest = "1:c28625428387b63dd7154eb857f51e700465cfbf7c06f619e71f2da33cefe47e"
   name = "github.com/boltdb/bolt"
   packages = ["."]
+  pruneopts = "UT"
   revision = "583e8937c61f1af6513608ccc75c97b6abdf4ff9"
   version = "v1.3.0"
 
 [[projects]]
+  digest = "1:01d3c3dfb7ef9da24cd00cbd5b9e2c147fa7a3f44a83028bc737da9cac7ed60b"
   name = "github.com/codegangsta/cli"
   packages = ["."]
+  pruneopts = "UT"
   revision = "0bdeddeeb0f650497d603c4ad7b20cfe685682f6"
   version = "v1.19.1"
 
 [[projects]]
   branch = "master"
+  digest = "1:3a60921f3c99de45d26b372450e666196a123def1edc2fb543c33db4a93813a7"
   name = "github.com/comail/colog"
   packages = ["."]
+  pruneopts = "UT"
   revision = "fba8e7b1f46c3607f09760ce3880066e7ff57c5a"
 
 [[projects]]
+  digest = "1:a2c1d0e43bd3baaa071d1b9ed72c27d78169b2b269f71c105ac4ba34b1be4a39"
   name = "github.com/davecgh/go-spew"
   packages = ["spew"]
+  pruneopts = "UT"
   revision = "346938d642f2ec3594ed81d874461961cd0faa76"
   version = "v1.1.0"
 
 [[projects]]
+  digest = "1:d79fbd3d80f069826fe0becfc84e32658dbb909dcadc6d7e121acad6054c5956"
   name = "github.com/golang/protobuf"
   packages = ["proto"]
+  pruneopts = "UT"
   revision = "2402d76f3d41f928c7902a765dfc872356dd3aad"
 
 [[projects]]
+  branch = "master"
+  digest = "1:6211d38e04c8b2200d07c80d5b5799427161b5c76e9dd8bb0808b872d360e278"
+  name = "github.com/gozwave/gozw"
+  packages = [
+    "application",
+    "cc",
+    "cc/association",
+    "cc/battery",
+    "cc/manufacturer-specific",
+    "cc/manufacturer-specific-v2",
+    "cc/security",
+    "cc/version",
+    "cc/version-v2",
+    "frame",
+    "gen",
+    "protocol",
+    "security",
+    "serial-api",
+    "session",
+    "testutil",
+    "transport",
+    "util",
+  ]
+  pruneopts = "UT"
+  revision = "02b3c1951f9119113a16051991eb051d8949af6e"
+
+[[projects]]
+  digest = "1:daa1a9ee17e3da72cda2e4f1da735a3cca140385c31cee2629ff290e8970e3a7"
   name = "github.com/looplab/fsm"
   packages = ["."]
+  pruneopts = "UT"
   revision = "608090178e1a61fdcf160bdc3dba4afbb54cf408"
 
 [[projects]]
+  digest = "1:88c087d9f829c4e3f763d05adbc9a31ceb06fa33d05558e72283ab0f23d29faa"
   name = "github.com/peterh/liner"
   packages = ["."]
+  pruneopts = "UT"
   revision = "8975875355a81d612fafb9f5a6037bdcc2d9b073"
 
 [[projects]]
+  digest = "1:08413c4235cad94a96c39e1e2f697789733c4a87d1fdf06b412d2cf2ba49826a"
   name = "github.com/pmezard/go-difflib"
   packages = ["difflib"]
+  pruneopts = "UT"
   revision = "d8ed2627bdf02c080bf22230dbb337003b7aba2d"
 
 [[projects]]
   branch = "master"
+  digest = "1:3c4e17be65ccfad62984bfde86b98b2c3ed74012891d2715720b18b02974fbec"
   name = "github.com/reiver/go-stringcase"
   packages = ["."]
+  pruneopts = "UT"
   revision = "b80b3ac9fc374235d9f59d294a7c70ab5f53fdbf"
 
 [[projects]]
   branch = "master"
+  digest = "1:f1ed38d903aba816e05668ab788268f5aa979d6ae70091444db72c2727e8d08a"
   name = "github.com/reiver/go-whitespace"
   packages = ["."]
+  pruneopts = "UT"
   revision = "5c4ea59c072e7db2684f8ea04b6e95a58e0f690d"
 
 [[projects]]
+  digest = "1:25f2747b063c0a656195ef85413cef8c9f2bbe128deab7d39563a6ca1e536070"
   name = "github.com/stretchr/testify"
   packages = ["assert"]
+  pruneopts = "UT"
   revision = "69483b4bd14f5845b5a1e55bca19e954e827f1d0"
   version = "v1.1.4"
 
 [[projects]]
+  digest = "1:7d047c08dae28bd3b6602a0e054b2bb9234daf07997fac1d2223427f4b66ec77"
   name = "github.com/tarm/serial"
   packages = ["."]
+  pruneopts = "UT"
   revision = "37be519d49878d0098e34fb614136b81e6c87861"
 
 [[projects]]
+  digest = "1:c8904037a371cbf41a32bcda3c4c244bb71fb32e2cb4006457a4c3a897990783"
   name = "golang.org/x/net"
   packages = ["context"]
+  pruneopts = "UT"
   revision = "f315505cf3349909cdf013ea56690da34e96a451"
 
 [[projects]]
+  digest = "1:62d32e3ab9655bb0124b5d7a87eed55c6606a5488290111bd2a06a5f01baba1d"
   name = "golang.org/x/sys"
   packages = ["unix"]
+  pruneopts = "UT"
   revision = "8f0908ab3b2457e2e15403d3697c9ef5cb4b57a9"
 
 [[projects]]
+  digest = "1:2047acdb27b21a7f1db9f6bc89d17045965b33d5ff057db61103fe28f9a6a168"
   name = "golang.org/x/tools"
   packages = [
     "go/ast/astutil",
-    "imports"
+    "imports",
   ]
+  pruneopts = "UT"
   revision = "2a5864fcfb595b4ee9a7607f1beb25778cf64c6e"
 
 [[projects]]
+  digest = "1:8bcee60d2fa57595b09d5c09e5197fe04dd7369a4fb675f3dbbbfc8a23a532e5"
   name = "google.golang.org/appengine"
   packages = [
     ".",
@@ -102,27 +162,64 @@
     "internal/datastore",
     "internal/log",
     "internal/modules",
-    "internal/remote_api"
+    "internal/remote_api",
   ]
+  pruneopts = "UT"
   revision = "926995697fa8241be2dc73eb318666e24f44ed51"
 
 [[projects]]
+  digest = "1:a7438a3f7f92a25e8fb1d67de9ff4fc3355b86249999bf131092b76823db13e6"
   name = "gopkg.in/vmihailenco/msgpack.v2"
   packages = [
     ".",
-    "codes"
+    "codes",
   ]
+  pruneopts = "UT"
   revision = "f4f8982de4ef0de18be76456617cc3f5d8d8141e"
   version = "v2.9.1"
 
 [[projects]]
+  digest = "1:35c04c23c8aef680782e117c67e29750453c92d11448da616d2e399887e5fc86"
   name = "gopkg.in/yaml.v2"
   packages = ["."]
+  pruneopts = "UT"
   revision = "cd8b52f8269e0feb286dfeef29f8fe4d5b397e0b"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "52451fedc59024cced34355c62aa14e22c3628f545132db357e987fe79f261b3"
+  input-imports = [
+    "github.com/asaskevich/EventBus",
+    "github.com/boltdb/bolt",
+    "github.com/codegangsta/cli",
+    "github.com/comail/colog",
+    "github.com/davecgh/go-spew/spew",
+    "github.com/wimspaargaren/gozw/application",
+    "github.com/wimspaargaren/gozw/cc",
+    "github.com/wimspaargaren/gozw/cc/association",
+    "github.com/wimspaargaren/gozw/cc/battery",
+    "github.com/wimspaargaren/gozw/cc/manufacturer-specific",
+    "github.com/wimspaargaren/gozw/cc/manufacturer-specific-v2",
+    "github.com/wimspaargaren/gozw/cc/security",
+    "github.com/wimspaargaren/gozw/cc/version",
+    "github.com/wimspaargaren/gozw/cc/version-v2",
+    "github.com/wimspaargaren/gozw/frame",
+    "github.com/wimspaargaren/gozw/gen",
+    "github.com/wimspaargaren/gozw/protocol",
+    "github.com/wimspaargaren/gozw/security",
+    "github.com/wimspaargaren/gozw/serial-api",
+    "github.com/wimspaargaren/gozw/session",
+    "github.com/wimspaargaren/gozw/testutil",
+    "github.com/wimspaargaren/gozw/transport",
+    "github.com/wimspaargaren/gozw/util",
+    "github.com/looplab/fsm",
+    "github.com/peterh/liner",
+    "github.com/reiver/go-stringcase",
+    "github.com/stretchr/testify/assert",
+    "github.com/tarm/serial",
+    "golang.org/x/tools/imports",
+    "gopkg.in/vmihailenco/msgpack.v2",
+    "gopkg.in/yaml.v2",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1

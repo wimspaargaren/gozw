@@ -6,8 +6,8 @@ import (
 
 	"github.com/comail/colog"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/gozwave/gozw/protocol"
-	"github.com/gozwave/gozw/session"
+	"github.com/wimspaargaren/gozw/protocol"
+	"github.com/wimspaargaren/gozw/session"
 )
 
 type ILayer interface {

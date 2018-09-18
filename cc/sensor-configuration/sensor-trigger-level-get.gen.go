@@ -6,7 +6,7 @@ package sensorconfiguration
 import (
 	"encoding/gob"
 
-	"github.com/gozwave/gozw/cc"
+	"github.com/wimspaargaren/gozw/cc"
 )
 
 const CommandSensorTriggerLevelGet cc.CommandID = 0x02

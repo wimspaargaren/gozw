@@ -3,8 +3,8 @@ package security
 import (
 	"errors"
 
-	"github.com/gozwave/gozw/cc"
-	"github.com/gozwave/gozw/cc/security"
+	"github.com/wimspaargaren/gozw/cc"
+	"github.com/wimspaargaren/gozw/cc/security"
 )
 
 type EncryptedMessage struct {

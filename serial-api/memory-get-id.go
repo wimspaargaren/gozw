@@ -4,9 +4,9 @@ import (
 	"encoding/binary"
 	"errors"
 
-	"github.com/gozwave/gozw/frame"
-	"github.com/gozwave/gozw/protocol"
-	"github.com/gozwave/gozw/session"
+	"github.com/wimspaargaren/gozw/frame"
+	"github.com/wimspaargaren/gozw/protocol"
+	"github.com/wimspaargaren/gozw/session"
 )
 
 func (s *Layer) MemoryGetID() (homeID uint32, nodeID byte, err error) {
