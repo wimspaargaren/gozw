@@ -6,8 +6,6 @@ package cc
 import "fmt"
 
 const (
-	Alarm                                    CommandClassID = 0x71
-	AlarmV2                                  CommandClassID = 0x71
 	NotificationV3                           CommandClassID = 0x71
 	NotificationV4                           CommandClassID = 0x71
 	NotificationV5                           CommandClassID = 0x71
@@ -214,8 +212,8 @@ const (
 func (c CommandClassID) String() string {
 	switch c {
 
-	case Alarm:
-		return "Command Class Alarm"
+	case NotificationV3:
+		return "Command Class Notification"
 
 	case ApplicationStatus:
 		return "Command Class Application Status"

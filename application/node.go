@@ -8,15 +8,11 @@ import (
 	"gopkg.in/vmihailenco/msgpack.v2"
 
 	"github.com/boltdb/bolt"
-	"github.com/davecgh/go-spew/spew"
 	"github.com/wimspaargaren/gozw/cc"
 	"github.com/wimspaargaren/gozw/cc/association"
-	"github.com/wimspaargaren/gozw/cc/battery"
 	"github.com/wimspaargaren/gozw/cc/manufacturer-specific"
-	"github.com/wimspaargaren/gozw/cc/manufacturer-specific-v2"
 	"github.com/wimspaargaren/gozw/cc/security"
 	"github.com/wimspaargaren/gozw/cc/version"
-	"github.com/wimspaargaren/gozw/cc/version-v2"
 	"github.com/wimspaargaren/gozw/protocol"
 	"github.com/wimspaargaren/gozw/serial-api"
 	"github.com/wimspaargaren/gozw/util"
@@ -173,10 +169,6 @@ func (n *Node) SendCommand(command cc.Command) error {
 		}
 	}
 
-	if !n.CommandClasses.Supports(commandClass) {
-		return errors.New("Command class not supported")
-	}
-
 	if n.CommandClasses.IsSecure(commandClass) {
 		return n.application.SendDataSecure(n.NodeID, command)
 	}
@@ -262,13 +254,8 @@ func (n *Node) nextQueryStage() {
 }
 
 func (n *Node) emitNodeEvent(event cc.Command) {
-	buf, err := event.MarshalBinary()
-	if err != nil {
-		fmt.Printf("error encoding: %v\n", err)
-		return
-	}
 
-	n.application.EventBus.Publish("nodeCommand", n.NodeID, buf)
+	n.application.EventBus.Publish("nodeCommand", n.NodeID, event)
 }
 
 func (n *Node) receiveControllerUpdate(update serialapi.ControllerUpdate) {
@@ -366,6 +353,13 @@ func (n *Node) receiveApplicationCommand(cmd serialapi.ApplicationCommand) {
 			fmt.Printf("error: no version loaded for %s\n", commandClassID)
 		}
 	}
+	if commandClassID.String() == "Command Class Notification" {
+		ver = 4
+	}
+
+	if commandClassID.String() == "Command Class Sensor Multilevel" {
+		ver = 5
+	}
 
 	command, err := cc.Parse(ver, cmd.CommandData)
 	if err != nil {
@@ -375,63 +369,7 @@ func (n *Node) receiveApplicationCommand(cmd serialapi.ApplicationCommand) {
 
 	switch command.(type) {
 
-	case *battery.Report:
-		if cmd.CommandData[2] == 0xFF {
-			fmt.Printf("Node %d: low battery alert\n", n.NodeID)
-		} else {
-			fmt.Printf("Node %d: battery level is %d\n", n.NodeID, command.(*battery.Report))
-		}
-		n.emitNodeEvent(command)
-
-	case *security.CommandsSupportedReport:
-		fmt.Println("security commands supported report")
-		n.receiveSecurityCommandsSupportedReport(*command.(*security.CommandsSupportedReport))
-		fmt.Println(n.GetSupportedSecureCommandClassStrings())
-
-	case *manufacturerspecific.Report:
-		spew.Dump(command.(*manufacturerspecific.Report))
-		report := *command.(*manufacturerspecific.Report)
-		n.receiveManufacturerInfo(report.ManufacturerId, report.ProductTypeId, report.ProductId)
-		n.emitNodeEvent(command)
-
-	case *manufacturerspecificv2.Report:
-		spew.Dump(command.(*manufacturerspecificv2.Report))
-		report := *command.(*manufacturerspecificv2.Report)
-		n.receiveManufacturerInfo(report.ManufacturerId, report.ProductTypeId, report.ProductId)
-		n.emitNodeEvent(command)
-
-	case *version.CommandClassReport:
-		spew.Dump(command.(*version.CommandClassReport))
-		report := command.(*version.CommandClassReport)
-		n.receiveCommandClassVersion(cc.CommandClassID(report.RequestedCommandClass), report.CommandClassVersion)
-		n.saveToDb()
-
-	case *versionv2.CommandClassReport:
-		spew.Dump(command.(*versionv2.CommandClassReport))
-		report := command.(*versionv2.CommandClassReport)
-		n.receiveCommandClassVersion(cc.CommandClassID(report.RequestedCommandClass), report.CommandClassVersion)
-		n.saveToDb()
-
-		// case alarm.Report:
-		// 	spew.Dump(command.(alarm.Report))
-		//
-		// case usercode.Report:
-		// 	spew.Dump(command.(usercode.Report))
-		//
-		// case doorlock.OperationReport:
-		// 	spew.Dump(command.(doorlock.OperationReport))
-		//
-		// case thermostatmode.Report:
-		// 	spew.Dump(command.(thermostatmode.Report))
-		//
-		// case thermostatoperatingstate.Report:
-		// 	spew.Dump(command.(thermostatoperatingstate.Report))
-		//
-		// case thermostatsetpoint.Report:
-		// 	spew.Dump(command.(thermostatsetpoint.Report))
-
 	default:
-		spew.Dump(command)
 		n.emitNodeEvent(command)
 	}
 }
